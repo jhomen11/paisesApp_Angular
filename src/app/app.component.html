@@ -1,16 +1,32 @@
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-3">
-            <h2>Busquedas</h2>
-            <hr>
-            <ul class="list-group">
-                <li class="list-group-item">Buscar País</li>
-                <li class="list-group-item">Por Region</li>
-                <li class="list-group-item">Por Capital</li>
-            </ul>
-        </div>
-        <div class="col">
-            <app-por-capital></app-por-capital>
-        </div>
+  <div class="row">
+    <div class="col-3">
+      <h2>Busquedas</h2>
+      <hr />
+      <ul class="list-group">
+        <li routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true}"
+            routerLink="" 
+            class="list-group-item"
+        >
+            Buscar País
+        </li>
+        <li  routerLinkActive="active"
+            routerLink="region" 
+            class="list-group-item"
+        >
+            Por Region
+        </li>
+        <li routerLinkActive="active" 
+            routerLink="capital" 
+            class="list-group-item"
+        >
+            Por Capital
+        </li>
+      </ul>
     </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
