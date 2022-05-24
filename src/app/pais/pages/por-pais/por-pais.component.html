@@ -12,6 +12,16 @@
     </div>
 </div>
 
+<ul class="list-group">
+    <li *ngFor="let pais of paisesSugeridos"
+        class="list-group-item list-group-item-action"
+    >
+    <a class="nav-link" [routerLink]="['/pais', pais.cca3]">
+        {{pais.name.common}}
+    </a>
+    </li>
+</ul>
+
 <hr>
 <div *ngIf="hayError"
     class="alert alert-danger p-2"
